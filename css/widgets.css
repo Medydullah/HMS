@@ -1,0 +1,60 @@
+.badge-custom{
+    padding: 0.1em 1em;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.code-font{
+    font-family: Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1.2em;
+}
+
+.padded-half{
+    padding: 0.5em;
+}
+
+
+.padded-1{
+    padding: 1em;
+}
+
+.time-stamp{
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+.left-menu-logo{
+    font-family: 'Bree Serif', serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.dmw-logo{
+    color: #3f9ae5;
+    background: #ffffff;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.active-left-menu{
+    border-left: 4px solid #ffffff;
+    background: #1A5276 ;
+}
+
+.active-left-nav{
+    border-left: 3px solid #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fa-pencil-alt{
+    font-size: 0.7em;
+    border: 1px solid #21618C;
+    padding: 0.4em;
+    border-radius: 1em;
+}
+
+.btn-round{
+    border-radius: 1em;
+    padding: 4px 1em;
+    line-height: 1em;
+}
