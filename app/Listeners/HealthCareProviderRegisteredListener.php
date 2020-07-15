@@ -33,8 +33,8 @@ class HealthCareProviderRegisteredListener
          email: ". $providerRegisteredEvent->healthCareProvider->email ."
          PWD: " . $providerRegisteredEvent->healthCareProvider->plain_password );
 
-         Mail::to($providerRegisteredEvent->healthCareProvider->email)
-            ->send(new EmailVerificationMail($providerRegisteredEvent->healthCareProvider));
+        //  Mail::to($providerRegisteredEvent->healthCareProvider->email)
+        //     ->send(new EmailVerificationMail($providerRegisteredEvent->healthCareProvider));
     }
 }
 

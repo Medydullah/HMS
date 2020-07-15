@@ -30,7 +30,7 @@ class HealthCareEmployeeAddedListener{
          email: ". $hceAddedEvent->healthCareEmployee->email ."
          PWD: " . $hceAddedEvent->healthCareEmployee->plain_password );
 
-        Mail::to($hceAddedEvent->healthCareEmployee->email)->send(new HealthCareEmployeeVerificationMail($hceAddedEvent->healthCareEmployee));
+        // Mail::to($hceAddedEvent->healthCareEmployee->email)->send(new HealthCareEmployeeVerificationMail($hceAddedEvent->healthCareEmployee));
 
     }
 

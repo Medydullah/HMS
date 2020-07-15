@@ -126,7 +126,7 @@ Route::post('/expert/opd/dmw/verify', 'HealthExpertController@verifyDmwValidityA
 Route::get('/expert/opd/form/{dmw_id?}/{active_tab?}', 'HealthExpertController@generateNewServiceForm')->name('hce.opd.form.generate');
 Route::post('/expert/opd/form', 'HealthExpertController@saveNewServiceForm')->name('hce.opd.form.save');
 
-#search wallet
+#search medical data
 Route::get('/expert/patient/wallet/search', 'HealthExpertController@searchUserByToken')->name('hce.patient.wallet.search');
 Route::get('/expert/patient/wallet/search/submit', 'HealthExpertController@submitSearchQuery')->name('hce.patient.wallet.search.submit');
 
@@ -187,7 +187,7 @@ Route::post('/expert/patient/consultation/final_diagnosis/save', 'HealthExpertCo
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------
-//------------------------- 2.4 (Hospital) Other DWM functions  ------------------------------------------------------------
+//------------------------- 2.4 (Hospital) Other HIMS functions  ------------------------------------------------------------
 #Personal Details
 Route::get('/expert/user/details/personal/{visit_id?}', 'HealthExpertController@showUserPersonalDetails')->name('expert.user.details.personal');
 
@@ -198,7 +198,7 @@ Route::get('/expert/user/trend/{vs_id?}/{viewMode?}', 'HealthExpertController@sh
 Route::get('/expert/user/journal/{visit_id?}', 'HealthExpertController@showJournalRecords')->name('expert.user.medical.journal');
 Route::get('/expert/user/journal/record/{visit_id?}/{record_id?}', 'HealthExpertController@showJournalRecordDetails')->name('expert.user.medical.journal.record');
 
-//------------------------- 2.4 [[End]] (Hospital) Other DWM functions  ------------------------------------------------------------
+//------------------------- 2.4 [[End]] (Hospital) Other HIMS functions  ------------------------------------------------------------
 
 
 
@@ -297,6 +297,10 @@ Route::get('/system/admin/patients/deactivate/{patient_id?}', 'SystemAdminContro
 
 
 Route::get('/system/test', 'SystemAdminController@testMail')->name('system.admin.mail.test');
+
+////////////////////////drug
+Route::get('/', 'HealthExpertController@searchUserByToken');
+Route::get('expert/pharmacy/{active_tab?}', 'HealthExpertController@showDrug')->name('hce.pharmacy');
 
 
 

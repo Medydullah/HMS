@@ -451,7 +451,7 @@ class UserControllerAPI extends Controller{
 
     //        $user->dmw_token= "U2019-003-TGA6";
     private function generateDmwToken(User $user){
-        $token  ="D2009"."-W00"
+        $token  ="M2009"."-D00"
                 .$user->id
                  ."-".strtoupper(  dechex(time()) );
 

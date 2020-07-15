@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>HIMS</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -264,7 +264,7 @@
                                                                   <span class="input-group-text">Year</span>
                                                               </div>
                                                               <select class="form-control" name="year" style="padding-left: 3px; padding-right: 3px">
-                                                                  <option>2019</option> <option>2018</option>
+                                                                  <option>2019</option> <option>2020</option>
                                                               </select>
                                                               <div class="input-group-append">
                                                                   <button class="btn btn-success" type="submit">Get </button>

@@ -7,10 +7,10 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- title {{ config('app.name', 'Laravel') }} -->
+    <title>Admin</title>
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
+    <!-- Scripts {{ config('app.name', 'Laravel') }} -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -23,6 +23,26 @@
     <link href="{{ asset('css/widgets.css') }}" rel="stylesheet">
 
     <style>
+     
+        .permission-group{
+            border-left: 6px Solid #ddd690;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            background: #fff8b3;
+            margin: 0.2em 0.4em 1em 0.2em;
+            border-top-right-radius: 1em;
+        }
+
+        /*** Left Nav ***/
+        .nav-link.active{
+            background: #D1F2EB !important;
+            border-color:#D1F2EB !important ;
+        }
+
+        .logo-text{
+            text-align: center;
+            color: #fff;
+        }
         .section-divider{
             height: 2px;
             background: #dddddd;
@@ -60,26 +80,6 @@
         .list-wrapper{
             padding: 1em;
          }
-
-        .permission-group{
-            border-left: 6px Solid #ddd690;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
-            background: #fff8b3;
-            margin: 0.2em 0.4em 1em 0.2em;
-            border-top-right-radius: 1em;
-        }
-
-        /*** Left Nav ***/
-        .nav-link.active{
-            background: #D1F2EB !important;
-            border-color:#D1F2EB !important ;
-        }
-
-        .logo-text{
-            text-align: center;
-            color: #fff;
-        }
 
         .navbar-nav{
 
@@ -136,6 +136,7 @@
                                       </div>
                                   </div>
                               </div>
+                              
 
                               <div class="card-body">
 
@@ -474,7 +475,7 @@
                                                                                   <label class="form-check-label" for="recommend_test">
                                                                                       Recommend tests/Examination
                                                                                   </label>
-                                                                              </div>
+                                                                              </div>-
                                                                           </div>
                                                                           <div class="col-md-6">
                                                                               <div class="form-check">

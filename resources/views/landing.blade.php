@@ -81,9 +81,9 @@
             <!-- LEft landing INfo -->
             <div class="w3l_form left-banner">
                 <div class="left_grid_info">
-                    <h1 class="system-text-logo" style="text-align: center; display: block">
+                    <h1 class="system-text-logo" style="text-align: center; display: block; ">
                         <i class="fa fa-stethoscope logo"> </i>
-                        HIMS MEDICAL
+                        HOSPITAL INFORMATION MANAGEMENT SYSTEM (HIMS) 
                     </h1>
                     <p class="description-p">
                         Integrated computerized patient medical records

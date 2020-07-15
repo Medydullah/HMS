@@ -80,7 +80,7 @@
             <div class="content">
 
                 <div class="title m-b-md">
-                    Medical Wallet
+                    Medical Data
                 </div>
 
                 <div class="links">

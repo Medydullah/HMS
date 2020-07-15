@@ -69,6 +69,7 @@ class HealthCareProviderController extends Controller
             'profession'=>$this->getProfession($active_tab)->sentenceCase,
         ]);
     }
+    
 
     public function showAddEmployeeForm($active_tab){
         return view('health_provider.staff',[

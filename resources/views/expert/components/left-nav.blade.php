@@ -30,34 +30,37 @@
         @endrole
 
         @role('pharmacist')
+        
         <li class="nav-item   list-unstyled ">
-            <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
-               href="{{ route('hce.opd') }}/insurance">
+            <a class="nav-link left-menu-link {{ $activeLeftNav == 'drug'? 'a`ctive-left-me`nu' : ' ' }}"
+               href="{{ route('hce.pharmacy') }}/drugs">
                 <i class="fa fa-money-bill-alt"></i>
                 Drugs
             </a>
         </li>
-        <li class="nav-item   list-unstyled ">
+        <!--
+         <li class="nav-item   list-unstyled ">
             <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
-               href="{{ route('hce.opd') }}/insurance">
+               href="{{ route('hce.opd') }}">
                 <i class="fa fa-money-bill-alt"></i>
                 Drug Price
             </a>
         </li>
+        
         <li class="nav-item   list-unstyled ">
             <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
-               href="{{ route('hce.opd') }}/insurance">
+               href="{{ route('hce.opd') }}">
                 <i class="fa fa-money-bill-alt"></i>
                 Request Drugs
             </a>
         </li>
         <li class="nav-item   list-unstyled ">
             <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
-               href="{{ route('hce.opd') }}/insurance">
+               href="{{ route('hce.opd') }}">
                 <i class="fa fa-money-bill-alt"></i>
                 View Stock
             </a>
-        </li>
+        </li> -->
        
         @endrole
 

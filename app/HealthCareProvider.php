@@ -31,3 +31,6 @@ class HealthCareProvider extends Authenticatable
         '', 'remember_token',
     ];
 }
+
+
+

@@ -32,7 +32,7 @@ class UserRegisteredEventListener
         email: ". $event->user->email ."
         PWD: " . $event->user->plain_password );
 
-        Mail::to($event->user->email)->send(new UserRegistrationMail($event->user));
+        // Mail::to($event->user->email)->send(new UserRegistrationMail($event->user));
 
     }
 }

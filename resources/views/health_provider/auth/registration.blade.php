@@ -117,7 +117,7 @@
     <a class="navbar-brand" href="{{ route('home') }}">
         <h3 class="system-text-logo" style="text-align: center; display: block">
             <i class="fa fa-stethoscope logo"> </i>
-            DMW Databank
+            HIMS :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
         </h3>
     </a>
 </nav>
