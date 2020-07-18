@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- title {{ config('app.name', 'Laravel') }} -->
-    <title>Admin</title>
+    <title>Pharmacist</title>
 
     <!-- Scripts {{ config('app.name', 'Laravel') }} -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -130,8 +130,8 @@
                                   <div class="row">
                                       <div class="col-md-12">
                                           <h3 style=" ">
-                                              <i class="fa fa-users"> </i>
-                                              Staff
+                                              <i class="fa fa-ambulance"> </i>
+                                              Drugs
                                           </h3>
                                       </div>
                                   </div>
@@ -153,8 +153,8 @@
                                                       <li class="nav-item">
                                                           <!-- <a class="nav-link {{ $activeTab=='receptionists'? 'active' : ' ' }} "
                                                              href="{{ route('health_provider.employees') }}/receptionists"> -->
-                                                              <i class="fa fa-money-bill"> </i>
-                                                              Receptionist
+                                                              <i class="fa fa-store"> </i>
+                                                              Drug Stock
                                                           </a>
                                                       </li>
 
@@ -162,7 +162,7 @@
                                                           <!-- <a class="nav-link {{ $activeTab=='doctors'? 'active' : ' ' }}"
                                                              href="{{ route('health_provider.employees') }}/doctors"> -->
                                                               <i class="fa fa-user-md"> </i>
-                                                              Doctors
+                                                              Drug Request
                                                           </a>
                                                       </li>
 
@@ -170,19 +170,40 @@
                                                       <li class="nav-item">
                                                           <!-- <a class="nav-link {{ $activeTab=='labs'? 'active' : ' ' }} "
                                                              href="{{ route('health_provider.employees') }}/labs"> -->
-                                                              <i class="fa fa-microscope"> </i>
-                                                              Lab Technicians
+                                                              <i class="fa fa-table"> </i>
+                                                              Drug Table
                                                           </a>
                                                       </li>
 
                                                       <li class="nav-item">
                                                           <!-- <a class="nav-link {{ $activeTab=='pharmacists'? 'active' : ' ' }} "
                                                              href="{{ route('health_provider.employees') }}/pharmacists"> -->
-                                                              <i class="fa fa-pills"> </i>
-                                                              Pharmacists
+                                                              <i class="fa fa-message"> </i>
+                                                              Notification
                                                           </a>
                                                       </li>
 
                                                   </ul>
-                                              </div>
 
+                                              <div class="content-wrapper" style="background: #f8fafc;">
+                                                  <div class="list-wrapper">
+
+
+
+                                                      <!-- List of Employees -->
+                                                              </div>
+                                                              <table class="table">
+                                                                  <thead>
+                                                                  <tr>
+                                                                      <th>S/N</th>
+                                                                      <th>Stock No</th>
+                                                                      <th>Stock Date</th>
+                                                                      <th>Name</th>
+                                                                      <th>Total Price</th>
+                                                                      <th>No Box</th>
+                                                                      <th>No Packets</th>
+                                                                      <th>No Tablets</th>
+                                                                      <th>Expire Date</th>
+                                                                                                                                                                        </tr>
+                                                                  </thead>
+                                                                  <tbody>
