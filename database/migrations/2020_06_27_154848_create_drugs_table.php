@@ -25,6 +25,9 @@ class CreateDrugsTable extends Migration
             $table->string('employment_id')->nullable();
             $table->string('employment_name')->nullable();
             $table->timestamps();
+            $table->date('total_drug')->nullable();  //date
+            $table->string('stock_no')->nullable();
+            $table->string('stock_date')->nullable();
          });
     }
 

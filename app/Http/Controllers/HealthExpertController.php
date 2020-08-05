@@ -6,6 +6,7 @@ use App\ActiveVisit;
 use App\Allergy;
 use App\BloodRelative;
 use App\Contact;
+use App\Drug;
 use App\DumbClasses\Parameters;
 use App\DumbClasses\Profession;
 use App\Encounter;
@@ -25,6 +26,9 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\drugs;
+use App\Incomes;
+
 
 class HealthExpertController extends Controller
 {
@@ -74,82 +78,84 @@ class HealthExpertController extends Controller
 
     //---------------[[ Provider Drugs Detail]]--------------------
 
+    public function addDrugForm() {
+        return view('expert.addDrugForm')->with(
+            [
+                'activeLeftNav'=>'wallets',
+                'editMode'=>'none',
+                'accessToken'=>" ",
+                'activeTab'=>'activeTab',
+                'activeTab'=>'drugs',
+            ]);
+    }
 
     public function showDrug()
     {
-        return view('expert.0_drug')->with(
+        $drugs = Drug::select('select * from drugs grouped by drug_name');
+        return view('expert.0_drug',['drugs'=>$drugs])->with(
             [
                 'activeLeftNav'=>'wallets',
-                'activeWalletTab'=>'visit',
+                // 'activeWalletTab'=>'visit',
                 'editMode'=>'none',
                 'accessToken'=>" ",
-                'activeTab'=>'activeTab'
+                'activeTab'=>'activeTab',
+                'activeTab'=>'drugs',
+                'activeTab'=>'incomes',
             ]);
     }  
 
-
-    // public function showDrugs( ){
-        
-    //     return view('drug',[
-    //         //'drug'=>$drug,
-    //         'activeLeftNav'=>"drug",
-    //          //'editMode'=>"none"
-    //      ]);
-    // }
-
-//     //---------------[[Staff |Employees | Experts]]--------------------
-//     public function showDrugsProfile($active_tab ){
-
-//         $drug = Drug::where('drug_id',Auth::id())
-//             ->role($this->getdruglist( $active_tab )->role)
-//                                 ->get();
-//         return view('expert.drug',[
-//             'view_mode'=>'none',
-//             'selectedDrugs'=>new Drug(),
-//             'drugs'=>$drugs,
-//             'activeLeftNav'=>"drug",
-//             'activeTab'=>$active_tab,
-//             'editMode'=>"none",
-//             'druglist'=>$this->getdruglist($active_tab)->sentenceCase,
-//         ]);
-//     }
-
-//     public function showAddDrugForm($active_tab){
-//         return view('drugs.add',[
-//             'selectedDrugs'=>new Drugs(),
-//             'view_mode'=>'none',
-//             'activeTab'=>$active_tab,
-//             'isUpdate'=>false,
-//             'editMode'=>"new_drugs",
-//             'activeLeftNav'=>"drugs",
-//         ]);
-//     }
-
-//     public function saveNewDrugs(Request $request){
-
-//         $request->validate([
-//             'drug_name' => 'required|max:169',
-//             'drug_id' => 'required|unique:drug_id|max:169',
-//             'price' => 'required|max:169',
-//             'expire_date' => 'required|unique:drugs_expire_date|max:169',
-//             'box_no' => 'required|max:169',
-//             'packets_no' => 'required|unique|max:169',
-//             'tablets_no' => 'required|max:169',
-
-//             'employment_id' => 'required|max:169',
-//             'employment_name' => 'required|max:169',
-           
-//         ]);
-//      }
-//            //-------------------------------------------drugs end --------------------------------
-// //=====================-------------------------============================---------------------
-// //================================================================================================
-
-
-
+    public function showIncome($active_tab)
+    {
+                return view('expert.0_stock_income')->with(
+            [
+                'activeLeftNav'=>'wallets',
+                // 'activeWalletTab'=>'visit',
+                'editMode'=>'none',
+                'accessToken'=>" ",
+                'activeTab'=>'activeTab',
+                'activeTab'=>'drugs',
+                'activeTab'=>'income',
+            ]);
+    }  
+    public function showDrugRequest()
+    {
+        return view('expert.0_drug_request')->with(
+            [
+                'activeLeftNav'=>'wallets',
+                // 'activeWalletTab'=>'visit',
+                'editMode'=>'none',
+                'accessToken'=>" ",
+                'activeTab'=>'activeTab',
+                'activeTab'=>'drugs'
+            
+            ]);
+    }  
+ 
+    public function showDrugNotification()
+    {
+        return view('expert.0_drug_notification')->with(
+            [
+                'activeLeftNav'=>'wallets',
+                // 'activeWalletTab'=>'visit',
+               'activeTab'=>'activeTab',
+                'activeTab'=>'drugs'
+            
+            ]);
+    }    public function showDrugTable()
+    {
+        return view('expert.0_drug_table')->with(
+            [
+                'activeLeftNav'=>'wallets',
+             
+                'activeTab'=>'activeTab',
+                'activeTab'=>'table'
+            
+            ]);
+    }  
+   
 
     //---------------------------------------------------------------------------------------------
-    //-------------------------0.0 Wallet Searches-------------------------------------------------
+    //-------------------------0.0 Medical Data Searches-------------------------------------------------
 public function searchUserByToken(){
         return view('expert.1_search_form')->with(
             [

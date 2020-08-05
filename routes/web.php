@@ -298,37 +298,20 @@ Route::get('/system/admin/patients/deactivate/{patient_id?}', 'SystemAdminContro
 
 Route::get('/system/test', 'SystemAdminController@testMail')->name('system.admin.mail.test');
 
-////////////////////////drug
+//=================================PHARMACIST============================================
+//=======================================================================================
 Route::get('/', 'HealthExpertController@searchUserByToken');
-Route::get('expert/pharmacy/{active_tab?}', 'HealthExpertController@showDrug')->name('hce.pharmacy');
+Route::get('expert/pharmacy/drug', 'HealthExpertController@showDrug')->name('hce.pharmacy');
 
+Route::get('expert/pharmacy/drug/request', 'HealthExpertController@showDrugRequest')->name('hce.pharmacy.request');
 
+Route::get('expert/pharmacy/add/drug', 'HealthExpertController@addDrugForm')->name('hce.pharmacy.add.drug.form');
 
+Route::get('expert/pharmacy/drug/table', 'HealthExpertController@showDrugTable')->name('hce.pharmacy.table');
 
+Route::get('expert/pharmacy/drug/notification', 'HealthExpertController@showDrugNotification')->name('hce.pharmacy.notification');
 
+Route::get('expert/stock/{active_tab?}', 'HealthExpertController@showIncome')->name('hce.income');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Route::get('expert/pharmacy/drug/{active_tab?}', 'HealthExpertController@showDrugNotification')->name('hce.pharmacy.notification');
+// Route::get('expert/pharmacy/drug/{active_tab?}', 'HealthExpertController@showDrugTable')->name('hce.pharmacy.table');

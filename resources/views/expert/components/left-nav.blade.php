@@ -32,21 +32,21 @@
         @role('pharmacist')
         
         <li class="nav-item   list-unstyled ">
-            <a class="nav-link left-menu-link {{ $activeLeftNav == 'drug'? 'a`ctive-left-me`nu' : ' ' }}"
-               href="{{ route('hce.pharmacy') }}/drugs">
+            <a class="nav-link left-menu-link {{ $activeLeftNav == 'drugs'? 'active-left-menu' : ' ' }}"
+               href="{{ route('hce.pharmacy') }}">
                 <i class="fa fa-money-bill-alt"></i>
                 Drugs
             </a>
         </li>
-        <!--
+      
          <li class="nav-item   list-unstyled ">
-            <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
-               href="{{ route('hce.opd') }}">
+            <a class="nav-link left-menu-link {{ $activeLeftNav == 'incomes'? 'active-left-menu' : ' ' }}"
+               href="{{ route('hce.income') }}/income">
                 <i class="fa fa-money-bill-alt"></i>
-                Drug Price
+                Stock Income
             </a>
         </li>
-        
+          <!--
         <li class="nav-item   list-unstyled ">
             <a class="nav-link left-menu-link {{ $activeLeftNav == 'accounts'? 'active-left-menu' : ' ' }}"
                href="{{ route('hce.opd') }}">

@@ -40,6 +40,7 @@ class HealthCareProviderController extends Controller
         ]);
     }
 
+    
 
     //---------------[[ Provider Profile]]--------------------
     public function showProfile( ){
