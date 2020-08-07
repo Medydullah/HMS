@@ -253,6 +253,13 @@ Route::get('/health_provider/admin/service_forms/details/{visit_id?}', 'HealthCa
 Route::get('/health_provider/admin/service_forms/close/{visit_id?}', 'HealthCareProviderController@closeServiceForm')->name('health_provider.admin.service_form.close');
 Route::get('/health_provider/admin/service_forms/download/{visit_id?}', 'HealthCareProviderController@downloadServiceForm')->name('health_provider.admin.service_forms.download');
 
+
+//----------------------------Generate Report-------------------------------------------
+
+Route::get('admin/generate/report', 'HealthCareProviderController@generatereport')->name('health_provider.staff.generate');
+
+
+
 #-------------------------- [[end]] HealthCareProvider Admin-------------------------------------------------------------------
 
 
@@ -312,6 +319,15 @@ Route::get('expert/pharmacy/drug/table', 'HealthExpertController@showDrugTable')
 Route::get('expert/pharmacy/drug/notification', 'HealthExpertController@showDrugNotification')->name('hce.pharmacy.notification');
 
 Route::get('expert/stock/{active_tab?}', 'HealthExpertController@showIncome')->name('hce.income');
+
+
+// Create file upload form
+Route::get('pharmacist/upload/report', 'HealthExpertController@createForm')->name('pharmacist.upload.file');
+
+// Store file
+Route::post('pharmacist/upload/report', 'HealthExpertController@fileUpload')->name('pharmacist.upload.file');
+
+
 
 // Route::get('expert/pharmacy/drug/{active_tab?}', 'HealthExpertController@showDrugNotification')->name('hce.pharmacy.notification');
 // Route::get('expert/pharmacy/drug/{active_tab?}', 'HealthExpertController@showDrugTable')->name('hce.pharmacy.table');

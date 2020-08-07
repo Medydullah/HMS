@@ -21,4 +21,8 @@ class HealthCareEmployee extends Authenticatable
         'qualification', 'specialization',
     ];
 
+    public function files()
+    {
+      return $this->hasMany(File::class);
+    }
 }

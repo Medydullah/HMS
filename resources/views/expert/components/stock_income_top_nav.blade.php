@@ -64,7 +64,7 @@
 
 
                                                       <li class="nav-item">
-                                                          <a class="nav-link {{ $activeTab=='table'? 'active' : ' ' }} "
+                                                          <a class="nav-link {{ $activeTab==''? 'active' : ' ' }} "
                                                              href="{{ route('hce.income') }}/table">
                                                               <i class="fa fa-table"> </i>
                                                               General Balance Report
@@ -72,8 +72,8 @@
                                                       </li>
 
                                                       <li class="nav-item">
-                                                          <a class="nav-link {{ $activeTab=='notification'? 'active' : ' ' }} "
-                                                             href="{{ route('hce.income') }}/notification">
+                                                          <a class="nav-link {{ $activeTab=='upload'? 'active' : ' ' }} "
+                                                             href="{{ route('pharmacist.upload.file') }}">
                                                               <i class="fa fa-message"> </i>
                                                               Upload Report
                                                           </a>

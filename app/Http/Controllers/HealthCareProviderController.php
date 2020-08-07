@@ -41,7 +41,6 @@ class HealthCareProviderController extends Controller
     }
 
     
-
     //---------------[[ Provider Profile]]--------------------
     public function showProfile( ){
         $healthCareProvider= HealthCareProvider::find(Auth::id());
@@ -53,6 +52,21 @@ class HealthCareProviderController extends Controller
              'editMode'=>"none"
          ]);
     }
+
+
+//////////////report generate===================
+
+public function generatereport(){
+
+    return view('health_provider.generate_report',[
+         'activeLeftNav'=>"service-forms",
+        //  'activeDate'=>$this->getRecentDates()->first,
+        //  'visits'=>$this->getVisitsByDate(Carbon::today()->toDateTimeString()),
+        //  'recentDates'=> $this->getRecentDates(),
+        'editMode'=>"none",
+     ]);
+}
+
 
     //---------------[[Staff |Employees | Experts]]--------------------
     public function showEmployees($active_tab ){

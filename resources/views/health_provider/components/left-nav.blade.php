@@ -35,7 +35,7 @@
             </a>
         </li>
         <li class="nav-item   list-unstyled ">
-            <a class="nav-link left-menu-link {{ $activeLeftNav == 'report'? 'active-left-menu' : ' ' }}" href="#">
+            <a class="nav-link left-menu-link {{ $activeLeftNav == 'report'? 'active-left-menu' : ' ' }}" href="{{ route('health_provider.staff.generate') }}">
                 <i class="fa fa-users"></i>
                 Generate Report
             </a>

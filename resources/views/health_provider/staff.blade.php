@@ -24,6 +24,15 @@
     <link href="{{ asset('css/widgets.css') }}" rel="stylesheet">
 
     <style>
+    
+    .permission-group{
+            border-left: 6px Solid #ddd690;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            background: #fff8b3;
+            margin: 0.2em 0.4em 1em 0.2em;
+            border-top-right-radius: 1em;
+        }
     /*** Left Nav ***/
     .nav-link.active {
         background: #D1F2EB !important;
