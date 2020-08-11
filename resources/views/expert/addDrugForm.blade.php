@@ -117,14 +117,14 @@
         <!-- ==================add menu ====================================== -->
 
         <!-- New Employee -->
-        <form method="POST" action="">
+        <form method="post" action="{{route('hce.pharmacy.drug.save')}}">
 
 
             <input name="active_tab" type="hidden" value="">
             <input name="expert_id" type="hidden" value="">
 
             <div class="card col-md-10 offset-1 new-employee-wrapper">
-
+                
                 <div>
                     <h4>
                         <i class="fa fa-user-plus"> </i>
@@ -140,76 +140,156 @@
                 <!-- ========== =================== Add NEw Drug Form================================== -->
                 <div class="section-divider" style="margin-top: 1em">
                 </div>
+                <!--1.3 Employment ID -->
+<div class="section-divider" style="margin-top: 1em">
+                </div>
                 <div class="section-heading">
                     <h5>
                         <i class="fa fa-user-circle"> </i>
-                        New Drug
+                        Staff Details
+                    </h5>
+                </div>
+
+                <div class="form-group row" style="display:none">
+                    <label for="employment_id" class="col-md-4 col-form-label text-md-right">
+                        Employment ID N<u>o</u>
+                    </label>
+
+                    <div class="col-md-8" >
+                        <input id="employment_id"  class="form-control" name="employment_id"
+                            value=" {{ Auth::user()->employment_id }}" >
+                    </div>
+                </div>
+                <div class="form-group row" style="">
+                    <label for="employment name" class="col-md-4 col-form-label text-md-right">
+                        Employment Name
+                    </label>
+                    
+                    <div class="col-md-8">
+                        <input id="employment_name" type="text" class="form-control" placeholder=" " name="employment_name"
+                            value="" required>
+                    </div>
+                </div>
+
+
+                <div class="section-heading">
+                    <h5>
+                        <i class="fa fa-user-circle"> </i>
+                        Drug Detail
                     </h5>
                 </div>
 
                 <!--1.1 Full Name -->
                 <div class="form-group row">
-                    <label for="name" class="col-md-4 col-form-label text-md-right">Drug
+                    <label for="drug name" class="col-md-4 col-form-label text-md-right">Drug
                         Name</label>
 
                     <div class="col-md-8">
-                        <input id="name" type="text" class="form-control" placeholder=" " name="name" value="" required
+                        <input id="drug_name" type="text" class="form-control" placeholder=" " name="dname" value="" required
                             autofocus>
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="drug id" class="col-md-4 col-form-label text-md-right">Drug
+                       ID</label>
+
+                    <div class="col-md-8">
+                        <input id="drug_id" type="text" class="form-control" placeholder=" " name="drug_id" value="" required
+                            autofocus>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="price" class="col-md-4 col-form-label text-md-right">Price</label>
+
+                    <div class="col-md-8">
+                        <input id="price" type="text" class="form-control" placeholder=" " name="price" value="" required
+                            autofocus>
+                    </div>
+                </div>
+                <div class="form-group row" >
+                    <label for="expire date" class="col-md-4 col-form-label text-md-right">
+                       Expire Date
+                    </label>
+
+                    <div class="col-md-8">
+                        <input id="employment_id" type="text" class="form-control" placeholder=" " name="expire_date"
+                            value="" required>
+                    </div>
+                </div>
+
 
                 <!--1.2 Email -->
+
+                <div class="section-divider" style="margin-top: 1em">
+                </div>
+                <div class="section-heading">
+                    <h5>
+                        <i class="fa fa-user-circle"> </i>
+                        Stock Info
+                    </h5>
+                </div>
+
                 <div class="form-group row">
-                    <label for="email" class="col-md-4 col-form-label text-md-right">Stock
+                    <label for="stock no" class="col-md-4 col-form-label text-md-right">Stock
                         No</label>
 
                     <div class="col-md-8">
-                        <input id="email" type="text" class="form-control" placeholder="" name="stock_no" value=""
+                        <input  type="text" class="form-control" placeholder="" name="stock_no" value=""
                             required autofocus>
                     </div>
                 </div>
 
                 <!--1.2 Phone -->
                 <div class="form-group row">
-                    <label for="phone" class="col-md-4 col-form-label text-md-right">Stock
+                    <label for="stock date" class="col-md-4 col-form-label text-md-right">Stock
                         Date</label>
 
                     <div class="col-md-8">
-                        <input id="phone" type="text" class="form-control" placeholder=" " name="phone" value=""
+                        <input id="stock_date" type="text" class="form-control" placeholder=" " name="date" value=""
                             required autofocus>
                     </div>
                 </div>
 
+
+               
                 <!--1.3 Employment ID -->
+               
+
                 <div class="form-group row">
-                    <label for="employment_id" class="col-md-4 col-form-label text-md-right">
-                        Employment ID N<u>o</u>
-                    </label>
+                    <label for="packet no" class="col-md-4  col-form-label text-md-right">Packet NO</label>
 
                     <div class="col-md-8">
-                        <input id="employment_id" type="text" class="form-control" placeholder=" " name="employment_id"
-                            value="" required>
-                    </div>
-                </div>
-
-                <!--1.4 Qualification -->
-                <div class="form-group row">
-                    <label for="qualification" class="col-md-4  col-form-label text-md-right">Qualification</label>
-
-                    <div class="col-md-8">
-                        <input id="qualification" type="text" class="form-control" placeholder=", " name="qualification"
+                        <input id="qualification" type="text" class="form-control" placeholder=" " name="packet_no"
                             value="">
                     </div>
                 </div>
 
                 <!--1.5 Specialization -->
                 <div class="form-group row">
-                    <label for="specialization" class="col-md-4 col-form-label text-md-right">
-                        Specialization
+                    <label for="box no" class="col-md-4 col-form-label text-md-right">
+                        Box NO
                     </label>
 
                     <div class="col-md-8">
-                        <input id="specialization" type="text" class="form-control" placeholder="" name="specialization"
+                        <input id="" type="text" class="form-control" placeholder="" name="box_no"
                             value="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tablets no" class="col-md-4 col-form-label text-md-right">
+                        Tablets NO
+                    </label>
+
+                    <div class="col-md-8">
+                        <input id="" type="text" class="form-control" placeholder="" name="box_no"
+                            value="">
+                    </div>
+                </div>
+
+                
+                <div class="form-group" style="text-align:center; margin-left:400px">
+
+
+                       <button type="submit"  style="width:150px;background-color: blue; color:white;">ADD</button>
                     </div>
                 </div>

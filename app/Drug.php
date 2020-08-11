@@ -18,9 +18,9 @@ class Drug extends Model
     protected $guard_name = 'drug';
 
     protected $fillable = [
-        'drug_id',  'drug_name', 'box_no', 'packet_no',
-        'stock_no', 'stock_date', 'employment_id',
-        'employment_name','packet_no','tablets_no', 'expire_date',
+        'drug_id', 'drug_name','price','expire_date', 'box_no', 'packet_no',
+        'stock_no', 'employment_id',
+        'employment_name', 'total_drug','stock_date',
     ];
 
 }

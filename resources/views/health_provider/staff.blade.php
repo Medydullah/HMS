@@ -201,13 +201,16 @@
                                                                 <div>
                                                                     <ul class="nav">
                                                                         <li class="nav-item">
-                                                                            <a class="nav-link"
+                                                                       
+                                                                        <a class="nav-link"
                                                                                 href="{{ route('health_provider.employee.add.form') }}/{{ $activeTab }}">
                                                                                 <i class="fa fa-user-plus"></i>
                                                                                 Add {{ $profession }}
                                                                             </a>
+                                                                            
                                                                         </li>
-
+                                                                       
+          
                                                                     </ul>
                                                                 </div>
                                                                 <table class="table">
@@ -226,6 +229,9 @@
                                                                         @foreach( $healthCareEmployees as
                                                                         $healthCareEmployee )
                                                                         <tr class="table-success">
+                                                                             <div style="float:right">
+                                                                        <a href="{{ url('pdf') }}" class="btn btn-success mb-2" >Export PDF</a>
+                                                                        </div>
                                                                             <td>{{ $healthCareEmployee->id }}</td>
                                                                             <td>{{ $healthCareEmployee->name }}</td>
                                                                             <td>{{ $healthCareEmployee->email }}</td>

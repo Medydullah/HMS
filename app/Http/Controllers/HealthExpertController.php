@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Hash;
 use App\drugs;
 use App\Incomes;
 use App\File;
+
 class HealthExpertController extends Controller
 {
     /**
@@ -87,10 +88,35 @@ class HealthExpertController extends Controller
                 'activeTab'=>'drugs',
             ]);
     }
+public function AddNewDrug(){
+ $drugs = new Drug();
+ $drugs->employee_id=$request->input('employee_id');
+ $drugs->stock_no=$request->input('stock_no');
+ $drugs->stock_date=$request->input('stock_date');
+ $drugs->packet_no=$request->input('packet_no');
+ $drugs->box_no=$request->input('box_no');
+ $drugs->tablet_no=$request->input('total_drug');
+ $drugs->expire_date=$request->input('expire_date');
+ $drugs->employee_name=$request->input('employee_name');
+ $drugs->drug_id=$request->input('drug_id');
+ $drugs->drug_name=$request->input('drug_name');
+ $drugs->price=$request->input('price');
+ 
+ $drugs->save();
 
+return redirect('expert.addDrugForm')->with(
+            [
+                'activeLeftNav'=>'wallets',
+                'editMode'=>'none',
+                'accessToken'=>" ",
+                'activeTab'=>'activeTab',
+                'activeTab'=>'drugs',
+            ]);
+
+}
     public function showDrug()
     {
-        $drugs = Drug::select('select * from drugs grouped by drug_name');
+        $drugs = Drug::all();
         return view('expert.0_drug',['drugs'=>$drugs])->with(
             [
                 'activeLeftNav'=>'wallets',

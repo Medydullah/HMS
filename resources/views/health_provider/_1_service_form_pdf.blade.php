@@ -159,7 +159,7 @@
                        Patient Name <strong> {{ $visit->name }} </strong>
                 </p>
                 <p class="detail-p-item">
-                    Wallet Token <strong> {{ $visit->dmw_token }} </strong>
+                    Medical Token <strong> {{ $visit->dmw_token }} </strong>
                 </p>
                 <p class="detail-p-item">
                     Phone #1 <strong> {{ $visit->phone_1 }} </strong>

@@ -212,8 +212,8 @@
 <div id="app">
 
               @include('expert.components.drug_top_nav')
-
               <div class="dashed-form">
+             
                                                                  <!-- form heading -->
                                                                 <h4>
                                                                    <span class="section-heading">
@@ -221,13 +221,13 @@
                                                                        Request Drug Form
                                                                    </span>
                                                                 </h4>
-
+<div style="display: none;">
                                                                 <!--1.1 Full name -->
                                                                 <div class="row form-input-row">
                                                                     <label for="name" class="col-md-4 form-label">Staff name</label>
                                                                     <div class=" col-md-8">
-                                                                    <input type="text" class="form-control " id="name"
-                                                                           value=""
+                                                                    <input  class="form-control " id="name"
+                                                                           value=" {{  Auth::user()->name  }}"
                                                                            name="name">
                                                                     </div>
                                                                 </div>
@@ -241,9 +241,21 @@
                                                                     <input type="text"
                                                                            class="form-control"
                                                                            id="ethnicity"
-                                                                           value=""
+                                                                           value=" {{  Auth::user()->health_provider_id  }}"
                                                                            name="ethnicity">
                                                                     </div>
+                                                                </div>
+                                                                <div class="row form-input-row">
+                                                                    <label for="ethnicity"
+                                                                           class="col-md-4 form-label">Staff Email</label>
+                                                                    <div class=" col-md-8">
+                                                                    <input type="text"
+                                                                           class="form-control"
+                                                                           id="ethnicity"
+                                                                           value=" {{  Auth::user()->email  }}"
+                                                                           name="ethnicity">
+                                                                    </div>
+                                                                </div>
                                                                 </div>
                                                                 <div class="row form-input-row">
                                                                     <label for="occupation" class="col-md-4 form-label">Drug ID</label>

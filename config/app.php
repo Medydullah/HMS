@@ -213,11 +213,21 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        ///Added By Charden
+        ///Added 
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'PdfReport' => Jimmyjs\ReportGenerator\Facades\PdfReportFacade::class,
         'ExcelReport' => Jimmyjs\ReportGenerator\Facades\ExcelReportFacade::class,
         'CSVReport' => Jimmyjs\ReportGenerator\Facades\CSVReportFacade::class,
+        'providers' => [
+ 
+            Barryvdh\DomPDF\ServiceProvider::class,
+            ],
+            
+           'aliases' => [
+            
+            'PDF' => Barryvdh\DomPDF\Facade::class,
+            ]
     ],
 
 ];
+ 
